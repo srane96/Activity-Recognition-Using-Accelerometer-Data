@@ -23,6 +23,13 @@ FFT plots give us a rough idea of the frequency content in the signal. Since, th
 ### Spectrogram analysis
 In spectrogram, the time varying signal is divided into number of blocks along the time axis. These blocks are also known as ‘windows’. And then, SFFT is applied on each of these blocks. Resulting in the graph, that gives us the frequency distribution at different time steps.
 There are many window functions that can be used for this purpose. Following plots show the different spectrograms obtained by using different windows. 
+
+### It can be observed from the confusion matrix that:
+1. The above confusion matrix shows true positives and true negatives in terms of percentages.
+2. Accuracy for detecting walking action was 98%, for detecting Descending stairs 51% and for detecting climbing stairs was 47%.
+3. The reason why walking detection was the most accurate is because the number of data points in the walking dataset was the largest. Thus climbing and descending accuracy can be increased by collecting more training data.
+One way to improve the model is by introducing additional features to each segment like mean, std_deviation, magnitude and direction of the data points.
+
 Parameters that affect SFFT:
 NFFT = Number of data points in each window frame. It is convention to set this value equal to some power of 2.
 noverlap = Number of data points that are allowed to overlap between nth and (n-1)th frame. 
